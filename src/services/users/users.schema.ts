@@ -12,7 +12,8 @@ export const userSchema = Type.Object(
   {
     id: Type.Number(),
     email: Type.String(),
-    password: Type.Optional(Type.String())
+    password: Type.Optional(Type.String()),
+    createdAt: Type.String({ format: 'iso-date-time' })
   },
   { $id: 'User', additionalProperties: false }
 )

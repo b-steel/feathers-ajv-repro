@@ -16,7 +16,9 @@ const formats: FormatsPluginOptions = [
   'uri-template',
   'json-pointer',
   'relative-json-pointer',
-  'regex'
+  'regex',
+  // @ts-ignore
+  'iso-date-time'
 ]
 
 export const dataValidator: Ajv = addFormats(new Ajv({}), formats)
